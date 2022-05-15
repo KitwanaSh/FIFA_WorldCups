@@ -23,10 +23,10 @@ The dataset is in __csv__ format as `WordCupMatches.csv`
 ## Software needed
 The following open source software are required to work on this project:
 
-- You need to install [anaconda]('https://www.anaconda.com/products/distribution')
-- A text editor eg.([VsCode]('https://code.visualstudio.com/'), [Atom]('https://atom.io/') or [Sublime]('https://www.sublimetext.com/'))
-- A terminal (in my case, I use [Git Bash]('https://git-scm.com/downloads'))
+- You need to install [anaconda](https://www.anaconda.com/products/distribution)
+- A text editor eg.([VsCode]('https://code.visualstudio.com/'), [Atom](https://atom.io/) or [Sublime](https://www.sublimetext.com/))
+- A terminal (in my case, I use [Git Bash](https://git-scm.com/downloads))
 
 ## Acknowledgement
-I am able to do this python data analysis thanks to the knowledge from [Udacity]('https://www.udacity.com').
-And I usually get datasets like this _FIFA World Cup_ from [kaggle]['https://www.kaggle.com/'] 
+I am able to do this python data analysis thanks to the knowledge from [Udacity](https://www.udacity.com).
+And I usually get datasets like this _FIFA World Cup_ from [kaggle](https://www.kaggle.com/])
