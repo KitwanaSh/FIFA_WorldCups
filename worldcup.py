@@ -13,7 +13,7 @@ def filter_time():
     """
     while True:
         try:
-            yeart = int(input("Enter the year of any WC or enter zero (0) the select all: "))
+            yeart = int(input("Enter the year of any WorldCup or enter zero (0) the select all: "))
             years = [1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 1978, 1982, 1986, 1990, 1994, 1998, 2002, 2006, 2010, 2014, 0]
             if yeart not in years:
                 print("You've entered an unknown year, try angain")
@@ -66,7 +66,7 @@ def load_datas(yeart, stage):
 
 def rw_data(df):
     """
-    Display the first 5 row of the data
+    Display the first 15 rows of the data
     Args:
     df - This is the pandas data frame variable name that we have
     choice - this is a yes or no based on our decision 
@@ -74,7 +74,7 @@ def rw_data(df):
     choice = str(input("Would you like to display the raw data 'yes' or 'no': ").lower())
     while True:
         if choice == 'yes':
-            print(df.head(5))
+            print(df.head(15))
             break
         else:
             print("Thank you!")
