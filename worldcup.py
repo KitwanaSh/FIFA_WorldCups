@@ -34,7 +34,7 @@ def filter_time():
         except:
             print("OPPS ) :>\nThis is not a valid record")
 
-    print("*"*40)
+    print("*"*100)
     print()
     return yeart, stage
 
@@ -79,15 +79,32 @@ def rw_data(df):
         else:
             print("Thank you!")
             break
-print("*"*40)
-print()
+print("*"*100)
+print("\n")
 
+def score_stat(df):
+    """Display the statiscs of goal score in competition"""
+    h_score_home = df['H.Team Goals'].max() 
+    h_score_away = df['A.Team Goals'].max()
+    for  res in h_score_home, h_score_away:
+        if h_score_home > h_score_away:
+            res == h_score_home
+        elif h_score_home < h_score_away:
+            res = h_score_away
+        else:
+            res = h_score_away
+    print("\n\nThe highest score is {} goals".format(res))
+    print("\nThe highest goal score in home team is {} goals and away team is {} goals".format(h_score_home, h_score_away))
+    
+    print("*"*100)
+    print("\n")
 def main():
     while True:
         yeart, stage = filter_time()
         df = load_datas(yeart, stage)
 
         rw_data(df)
+        score_stat(df)
 
         restart = input("Would you like to restart? 'yes' or 'no'= ")
         if restart.lower() != 'yes':
