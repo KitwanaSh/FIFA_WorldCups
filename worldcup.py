@@ -86,14 +86,14 @@ def score_stat(df):
     """Display the statiscs of goal score in competition"""
     h_score_home = df['H.Team Goals'].max() 
     h_score_away = df['A.Team Goals'].max()
-    for  res in h_score_home, h_score_away:
+    for  highest in h_score_home, h_score_away:
         if h_score_home > h_score_away:
-            res == h_score_home
+            highest == h_score_home
         elif h_score_home < h_score_away:
-            res = h_score_away
+            highest = h_score_away
         else:
-            res = h_score_away
-    print("\n\nThe highest score is {} goals".format(res))
+            higest = h_score_away
+    print("\n\nThe highest score is {} goals".format(highest))
     print("\nThe highest goal score in home team is {} goals and away team is {} goals".format(h_score_home, h_score_away))
     
     print("*"*100)
