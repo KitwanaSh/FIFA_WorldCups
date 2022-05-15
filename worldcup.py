@@ -86,15 +86,11 @@ def score_stat(df):
     """Display the statiscs of goal score in competition"""
     h_score_home = df['H.Team Goals'].max() 
     h_score_away = df['A.Team Goals'].max()
-    for  highest in h_score_home, h_score_away:
-        if h_score_home > h_score_away:
-            highest == h_score_home
-        elif h_score_home < h_score_away:
-            highest == h_score_away
-        else:
-            highest == h_score_away
-    print("\n\nThe highest score is {} goals".format(highest))
-    print("\nThe highest goal score in home team is {} goals and away team is {} goals".format(h_score_home, h_score_away))
+    if h_score_home > h_score_away:
+        print("\n\nThe highest score is {} goals".format(h_score_home))
+    else:
+        print("\n\nThe highest score is {} goals".format(h_score_away))
+    print("-"*50,"\nThe highest goal score in home team is {} goals and away team is {} goals".format(h_score_home, h_score_away))
     
     print("\n","*"*100)
     print("\n")
@@ -105,7 +101,7 @@ def summary_stat(df):
     df - pandas DataFrame filtering the worldcup year and stage
     declare - a yes or no decision
     """
-    declare = str(input("Would you like to display a summery statistic of this filter? 'yes' or 'no':  ").lower())
+    declare = str(input("Would you like to display a summary statistic of this filter? 'yes' or 'no':  ").lower())
     while True:
         if declare == 'yes':
             print(df.describe())
