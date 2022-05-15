@@ -79,7 +79,7 @@ def rw_data(df):
         else:
             print("Thank you!")
             break
-print("*"*100)
+print("\n","*"*100)
 print("\n")
 
 def score_stat(df):
@@ -90,14 +90,32 @@ def score_stat(df):
         if h_score_home > h_score_away:
             highest == h_score_home
         elif h_score_home < h_score_away:
-            highest = h_score_away
+            highest == h_score_away
         else:
-            higest = h_score_away
+            highest == h_score_away
     print("\n\nThe highest score is {} goals".format(highest))
     print("\nThe highest goal score in home team is {} goals and away team is {} goals".format(h_score_home, h_score_away))
     
-    print("*"*100)
+    print("\n","*"*100)
     print("\n")
+    
+def summary_stat(df):
+    """Display the general statistic based on what the user has input
+    Args()
+    df - pandas DataFrame filtering the worldcup year and stage
+    declare - a yes or no decision
+    """
+    declare = str(input("Would you like to display a summery statistic of this filter? 'yes' or 'no':  ").lower())
+    while True:
+        if declare == 'yes':
+            print(df.describe())
+            break
+        else:
+            print("Alright!")
+            break
+    print("\n","*"*100)
+    print("\n")
+    
 def main():
     while True:
         yeart, stage = filter_time()
@@ -105,6 +123,7 @@ def main():
 
         rw_data(df)
         score_stat(df)
+        summary_stat(df)
 
         restart = input("Would you like to restart? 'yes' or 'no'= ")
         if restart.lower() != 'yes':
